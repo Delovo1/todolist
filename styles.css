@@ -1,12 +1,128 @@
-#field {
-  overflow: hidden;
-  width: 200px;
-  height: 150px;
-  border-top: 10px solid black;
-  border-right: 10px solid gray;
-  border-bottom: 10px solid gray;
-  border-left: 10px solid black;
-  background-color: #00ff00;
-  font: 10px/1.2 monospace;
+@font-face {
+  font-family: "Anka/Coder";
+  src: url("fonts/GoogleSansCode-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Anka/Coder Light";
+  src: url("fonts/GoogleSansCode-Light.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Exo2";
+  src: url("fonts/Exo2-Medium.ttf") format("truetype");
+  font-style: normal;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #0d0d0d;
+}
+html {
+  font-size: 62.5%;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  text-align: center;
+  position: relative;
+  background-color: #1a1a1a;
+  min-height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  width: 89.6%;
+  margin: 0px auto;
+}
+button {
+  border: none;
+  color: #f2f2f2;
+  padding: 1.8rem 3.6rem;
+  border-radius: 1.6rem;
+  font-family: "Exo2";
+  font-weight: 500;
+  font-size: 2.5rem;
   margin-top: 100px;
+  margin-bottom: 100px;
+}
+.addTodo {
+  background-color: #1d921d;
+}
+.removeTodo {
+  color: #cc0000;
+  margin-left: 2rem;
+}
+
+h2 {
+  font-family: "Anka/Coder";
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 50px;
+
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+.burger {
+  width: 3.8rem;
+  height: 3.4rem;
+  position: absolute;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 50%;
+  left: 3.3rem;
+  transform: translate(-50%, -50%);
+}
+.burger hr {
+  color: white;
+  background-color: white;
+  border: 0.2rem solid white;
+  border-radius: 1.6rem;
+}
+.todolist {
+  min-height: 108rem;
+
+  font-family: "Exo2";
+}
+p {
+  font-family: "Anka/Coder";
+  font-size: 3rem;
+}
+.task {
+  display: flex;
+  min-height: 10rem;
+  border: 1px solid #bfbfbf;
+  background-color: #404040;
+  margin-bottom: 2.5rem;
+  border-radius: 1.5rem;
+  align-items: center;
+  overflow-x: auto;
+}
+.task input[type="checkbox"] {
+  accent-color: #cc0000;
+  margin: 3.2rem;
+  width: 4rem;
+  height: 4rem;
+}
+.task label {
+  /* border-left: 1px solid #bfbfbf; */
+  font-family: Anka/Coder;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 35px;
+  color: white;
+  line-height: 100%;
+  letter-spacing: 0%;
 }

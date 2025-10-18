@@ -4,11 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <button class="addTodo">Создать заметку</button>
-    <button class="removeTodo">Удалить помеченные задачи</button>
-    <div class="todolist"></div>
+    <nav>
+      <div class="burger">
+        <hr />
+        <hr />
+        <hr />
+      </div>
+      <h2>To-Do List</h2>
+    </nav>
+    <div class="main">
+      <button class="addTodo" title="Добавление новой задачи">
+        <span>ДОБАВИТЬ ЗАДАЧУ</span>
+      </button>
+      <button class="removeTodo" title="Удаление всех выполненных задач">
+        УДАЛИТЬ ЗАДАЧИ
+      </button>
+      <div class="todolist"></div>
+    </div>
+
     <script src="main.js"></script>
   </body>
 </html>
