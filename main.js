@@ -1,6 +1,9 @@
 const div = document.querySelector(".todolist");
 const btnAdd = document.querySelector(".addTodo");
 const btnRemove = document.querySelector(".removeTodo");
+const burger = document.querySelector(".burger");
+const point = document.querySelector(".menu img");
+console.log(point);
 let i = 1;
 function renderTodos() {
   const arr = JSON.parse(localStorage.getItem("todos")) || [];
@@ -9,6 +12,22 @@ function renderTodos() {
     div.append(element);
   }
 }
+burger.addEventListener("mouseover", () => {
+  Array.from(burger.querySelectorAll("hr")).forEach(
+    (val) => (val.style.borderColor = "#828282ff")
+  );
+});
+burger.addEventListener("mouseout", () => {
+  Array.from(burger.querySelectorAll("hr")).forEach(
+    (val) => (val.style.borderColor = "#ffffffff")
+  );
+});
+point.addEventListener("click", () => {
+  document.querySelector(".menu").style.transform = "translateX(-100%)";
+});
+burger.addEventListener("click", () => {
+  document.querySelector(".menu").style.transform = "translateX(100%)";
+});
 function whatPriotity(priority) {
   const prior = +prompt("Введите приоритет от 1 до 5 включительно");
   if (prior === 1) {

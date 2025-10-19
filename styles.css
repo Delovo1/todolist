@@ -54,13 +54,24 @@ button {
   font-size: 2.5rem;
   margin-top: 100px;
   margin-bottom: 100px;
+  cursor: pointer;
+  transition: all 0.5s;
 }
 .addTodo {
   background-color: #1d921d;
 }
+.addTodo:hover {
+  background-color: #116b11;
+  color: #e8dede;
+}
+.removeTodo:hover {
+  color: #ac0202;
+  background-color: #949494;
+}
 .removeTodo {
   color: #cc0000;
   margin-left: 2rem;
+  background-color: #c9c6c6;
 }
 
 nav h2 {
@@ -84,13 +95,16 @@ nav h2 {
   top: 50%;
   left: 3.3rem;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 .burger hr {
   color: white;
   background-color: white;
   border: 0.2rem solid white;
   border-radius: 1.6rem;
+  transition: all 0.3s;
 }
+
 .todolist {
   min-height: 60rem;
   margin-bottom: 7rem;
@@ -107,8 +121,11 @@ nav h2 {
   border-radius: 1.5rem;
   align-items: center;
   margin-left: 7.5rem;
-
   word-break: break-all;
+  transition: all 0.2s;
+}
+.task:hover {
+  background-color: #2f2f2f;
 }
 .task input[type="checkbox"] {
   accent-color: #cc0000;
@@ -165,6 +182,7 @@ footer {
   text-underline-offset: 0.45rem;
   text-decoration-thickness: 0%;
   text-decoration-skip-ink: auto;
+  transition: all 0.5s;
 }
 .autors {
   display: flex;
@@ -211,4 +229,43 @@ footer {
   letter-spacing: 0%;
   text-align: right;
   text-decoration: none;
+  transition: all 0.5s;
+}
+.contact a:hover {
+  color: #8d8c8c;
+}
+.rep a:hover {
+  color: #8d8c8c;
+}
+.menu {
+  position: absolute;
+  width: 31.2rem;
+  height: 100%;
+  left: -31.2rem;
+  background-color: #0d0d0d;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+  align-items: center;
+  gap: 5.5rem;
+  transition: transform 0.45s ease-out;
+}
+.menu img {
+  align-self: start;
+  margin-top: 3.5rem;
+  margin-left: 3.3rem;
+  cursor: pointer;
+  transition: all 0.34s;
+}
+.menu img:hover {
+  opacity: 0.5;
+}
+.menu p {
+  font-family: "Exo2";
+  font-weight: 200;
+  font-style: Bold;
+  font-size: 50px;
+  color: #ffffff;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
