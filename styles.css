@@ -63,7 +63,7 @@ button {
   margin-left: 2rem;
 }
 
-h2 {
+nav h2 {
   font-family: "Anka/Coder";
   font-weight: 700;
   font-style: Bold;
@@ -92,14 +92,11 @@ h2 {
   border-radius: 1.6rem;
 }
 .todolist {
-  min-height: 108rem;
-
+  min-height: 60rem;
+  margin-bottom: 7rem;
   font-family: "Exo2";
 }
-p {
-  font-family: "Anka/Coder";
-  font-size: 3rem;
-}
+
 .task {
   display: flex;
   position: relative;
@@ -138,4 +135,80 @@ p {
   width: 5rem;
   transform: translate(-50%, -50%);
   height: 5rem;
+}
+.hrfooter {
+  color: #3e3e3e;
+  border: solid 1px #3e3e3e;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3rem;
+  padding-right: 1.5rem;
+  min-height: 10rem;
+}
+.rep {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.rep a {
+  font-family: "Exo2";
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 25px;
+  color: #404040;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-underline-offset: 0.45rem;
+  text-decoration-thickness: 0%;
+  text-decoration-skip-ink: auto;
+}
+.autors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.autors p {
+  font-family: "Exo2";
+  font-weight: 200;
+  font-style: Bold;
+  font-size: 25px;
+  line-height: 95%;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  font-family: "Anka/Coder";
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  color: #404040;
+  line-height: 95%;
+  letter-spacing: 0%;
+  text-align: right;
+}
+.contact a {
+  font-family: "Anka/Coder";
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  color: #404040;
+  line-height: 95%;
+  letter-spacing: 0%;
+  text-align: right;
+  text-decoration: none;
 }
