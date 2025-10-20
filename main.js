@@ -3,13 +3,62 @@ const btnAdd = document.querySelector(".addTodo");
 const btnRemove = document.querySelector(".removeTodo");
 const burger = document.querySelector(".burger");
 const point = document.querySelector(".menu img");
-console.log(point);
+const buttons = document.querySelector(".buttons");
+const array = Array.from(div.querySelectorAll(".task"));
+array.forEach(
+  (val) =>
+    (val.style.marginLeft = `${
+      (100 -
+        (Math.max(
+          document.body.scrollWidth,
+          document.documentElement.scrollWidth
+        ) *
+          0.1) /
+          2 +
+        73) /
+      10
+    }rem`)
+);
+
+if (
+  Math.max(document.body.scrollWidth, document.documentElement.scrollWidth) >
+  393
+) {
+  window.addEventListener("resize", () => {
+    buttons.style.marginLeft = `${
+      (100 -
+        (Math.max(
+          document.body.scrollWidth,
+          document.documentElement.scrollWidth
+        ) *
+          0.1) /
+          2) /
+      10
+    }rem`;
+    const array = Array.from(div.querySelectorAll(".task"));
+    array.forEach(
+      (val) =>
+        (val.style.marginLeft = `${
+          (100 -
+            (Math.max(
+              document.body.scrollWidth,
+              document.documentElement.scrollWidth
+            ) *
+              0.1) /
+              2 +
+            73) /
+          10
+        }rem`)
+    );
+  });
+}
+
 let i = 1;
 function renderTodos() {
   const arr = JSON.parse(localStorage.getItem("todos")) || [];
   console.log(arr);
   for (const element of arr) {
-    div.append(element);
+    // div.append(element);
   }
 }
 burger.addEventListener("mouseover", () => {
