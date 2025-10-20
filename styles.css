@@ -339,11 +339,14 @@ footer {
   footer {
     flex-direction: column;
     padding: 1rem;
-    gap: 0.8rem;
+    gap: 1rem;
+    justify-content: center;
   }
   .autors {
     flex-direction: row;
     justify-content: space-between;
+    padding: 0px;
+    margin: 0px;
   }
   .contacts {
     flex-direction: row;
@@ -367,6 +370,10 @@ footer {
     font-style: Bold;
     font-size: 10px;
   }
+  .contact {
+    margin: 0px;
+    padding: 0px;
+  }
   .contact a {
     font-weight: 700;
     font-style: Bold;
@@ -384,5 +391,8 @@ footer {
   }
   .hrfooter {
     display: none;
+  }
+  nav {
+    min-height: 5rem;
   }
 }
