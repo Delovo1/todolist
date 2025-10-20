@@ -20,11 +20,11 @@ array.forEach(
     }rem`)
 );
 
-if (
-  Math.max(document.body.scrollWidth, document.documentElement.scrollWidth) >
-  393
-) {
-  window.addEventListener("resize", () => {
+window.addEventListener("resize", () => {
+  if (
+    Math.max(document.body.scrollWidth, document.documentElement.scrollWidth) >
+    393
+  ) {
     buttons.style.marginLeft = `${
       (100 -
         (Math.max(
@@ -50,8 +50,8 @@ if (
           10
         }rem`)
     );
-  });
-}
+  }
+});
 
 let i = 1;
 function renderTodos() {
