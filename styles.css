@@ -39,11 +39,47 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0px;
+}
+.documentation {
+  padding: 2rem;
+  box-sizing: border-box;
+  align-items: flex-start;
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  justify-content: flex-start;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4d4c4b;
+  width: 60%;
+  height: auto;
+  max-height: 80vh;
+  max-width: 60%;
+  border-radius: 1.6rem;
+  overflow-y: auto;
+  border: white thin solid;
+  gap: 1.5rem;
+  z-index: 100000;
+}
+.documentation p {
+  justify-self: start;
+  align-self: flex-start;
+  font-size: 2rem;
+}
+.documentation h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+.documentation img {
+  width: 70%;
 }
 .main {
   width: 89.6%;
   margin: 0px auto;
   padding: 0px;
+  box-sizing: border-box;
 }
 button {
   border: none;
@@ -53,7 +89,7 @@ button {
   font-family: "Exo2";
   font-weight: 500;
   font-size: 2.5rem;
-
+  box-sizing: border-box;
   cursor: pointer;
   transition: all 0.5s;
 }
@@ -173,7 +209,7 @@ footer {
   font-family: "Exo2";
   font-weight: 700;
   font-style: Bold;
-  font-size: 25px;
+  font-size: 2.5rem;
   color: #404040;
   line-height: 100%;
   letter-spacing: 0%;
@@ -195,7 +231,7 @@ footer {
   font-family: "Exo2";
   font-weight: 200;
   font-style: Bold;
-  font-size: 25px;
+  font-size: 2.5rem;
   line-height: 95%;
   letter-spacing: 0%;
   color: #ffffff;
@@ -213,7 +249,7 @@ footer {
   font-family: "Anka/Coder";
   font-weight: 700;
   font-style: Bold;
-  font-size: 20px;
+  font-size: 2rem;
   color: #404040;
   line-height: 95%;
   letter-spacing: 0%;
@@ -223,7 +259,7 @@ footer {
   font-family: "Anka/Coder";
   font-weight: 700;
   font-style: Bold;
-  font-size: 20px;
+  font-size: 2rem;
   color: #404040;
   line-height: 95%;
   letter-spacing: 0%;
@@ -260,19 +296,21 @@ footer {
 .menu img:hover {
   opacity: 0.5;
 }
-.menu p {
+.menu a {
   font-family: "Exo2";
   font-weight: 200;
   font-style: Bold;
-  font-size: 50px;
+  font-size: 4rem;
   color: #ffffff;
   line-height: 100%;
   letter-spacing: 0%;
+  text-decoration: none;
 }
 .buttons {
   display: flex;
   margin-top: 10rem;
   margin-bottom: 10rem;
+  box-sizing: border-box;
 }
 @media (max-width: 393px) {
   nav h2 {
@@ -321,7 +359,7 @@ footer {
   .task label {
     font-weight: 400;
     font-style: Regular;
-    font-size: 10px;
+    font-size: 1rem;
     color: #f2f2f2;
     line-height: 100%;
     letter-spacing: 0%;
@@ -362,13 +400,13 @@ footer {
   .rep a {
     font-weight: 700;
     font-style: Bold;
-    font-size: 13px;
+    font-size: 1.3rem;
   }
 
   .autors p {
     font-weight: 700;
     font-style: Bold;
-    font-size: 10px;
+    font-size: 1rem;
   }
   .contact {
     margin: 0px;
@@ -377,7 +415,7 @@ footer {
   .contact a {
     font-weight: 700;
     font-style: Bold;
-    font-size: 9px;
+    font-size: 0.9rem;
     margin: 0px;
     line-height: 95%;
     letter-spacing: 0%;

@@ -6,6 +6,30 @@ const point = document.querySelector(".menu img");
 const buttons = document.querySelector(".buttons");
 const array = Array.from(div.querySelectorAll(".task"));
 const tasks = Array.from(div.querySelectorAll(".task"));
+const menulink =
+  document.querySelectorAll(".menu a")[
+    document.querySelectorAll(".menu a").length - 1
+  ];
+let index = 0;
+console.log(menulink);
+menulink.addEventListener("click", () => {
+  if (!index % 2) {
+    document.querySelector(".documentation").style.display = "flex";
+    index++;
+  } else {
+    document.querySelector(".documentation").style.display = "none";
+    index--;
+  }
+});
+document.addEventListener("click", (event) => {
+  const doc = document.querySelector(".documentation");
+  // 3. Проверяем, находится ли кликнутый элемент вне нашего блока
+  if (!doc.contains(event.target) && !menulink.contains(event.target)) {
+    // 4. Если клик был за пределами блока, скрываем его
+    doc.style.display = "none";
+    index = 0;
+  }
+});
 let a = 0;
 function getObj() {
   a = Array.from(document.querySelectorAll(".task")).map((val) => {
@@ -123,8 +147,7 @@ point.addEventListener("click", () => {
 burger.addEventListener("click", () => {
   document.querySelector(".menu").style.transform = "translateX(100%)";
 });
-function whatPriotity(priority) {
-  const prior = +prompt("Введите приоритет от 1 до 5 включительно");
+function whatPriotity(priority, prior) {
   if (prior === 1) {
     priority.style.backgroundColor = "#57FF57";
     priority.parentElement.setAttribute("pr", prior);
@@ -140,9 +163,6 @@ function whatPriotity(priority) {
   } else if (prior === 5) {
     priority.parentElement.setAttribute("pr", prior);
     priority.style.backgroundColor = "#D03030";
-  } else {
-    alert("Вводить нужно от 1 до 5!");
-    whatPriotity(priority);
   }
 }
 function sortByPrior(task) {
@@ -157,7 +177,15 @@ function sortByPrior(task) {
 }
 btnAdd.addEventListener("click", () => {
   const inputOfUser = prompt("Введите название заметки").trim();
+
   if (inputOfUser) {
+    const prior = +prompt("Введите приоритет от 1 до 5 включительно");
+    if (!prior) {
+      return;
+    } else if (prior < 0 || prior > 5) {
+      alert("Необходимо ввести число от 1 до 5 включительно!");
+      return;
+    }
     const priority = document.createElement("div");
     priority.className = "prior";
     const input = document.createElement("input");
@@ -171,7 +199,8 @@ btnAdd.addEventListener("click", () => {
     task.append(priority);
     input.id = `${String(i)}`;
     label.htmlFor = `${String(i++)}`;
-    whatPriotity(priority);
+
+    whatPriotity(priority, prior);
     sortByPrior(task);
   }
 });
